@@ -44,10 +44,13 @@
                 </a>
                 <ul class="navbar-nav d-flex justify-content-center align-items-center">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Sobre mí</a>
+                    <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Proyectos</a>
+                    <a class="nav-link" href="#">Mi trayectoria</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Formación</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
@@ -68,13 +71,13 @@
 
     <!-- Sobre mi -->
 
-    <section class="sobre-mi seccion-oscura">
+    <section class="sobre-mi seccion-oscura" id="sobre-mi">
         <div class="contenedor  fade-in">
             <h1 class="seccion-titulo text-center">
                 Conoce a Regis Albornoz
             </h1>
             <p class="seccion-texto">
-                Como desarrollador en formación, me especializo en crear páginas web funcionales que cautivan por su diseño. Mi enfoque combina lo estético con lo práctico, buscando experiencias visuales atractivas que no comprometan la usabilidad. 
+                Como desarrollador en formación, he creado páginas web que combinan funcionalidad con diseño visual. Mi enfoque siempre intenta equilibrar lo atractivo con lo práctico, respetando lo que cada proyecto necesita.
             </p>
             <p class="seccion-texto">
                 Soy organizado, creativo y colaborativo, y me involucro de manera responsable en cada proyecto, cuidando tanto los detalles técnicos como el propósito del diseño. Siempre me esfuerzo por ofrecer soluciones que reflejen compromiso, claridad y un toque personal.
@@ -85,24 +88,54 @@
             <div class="accordion" id="acordeonSobreMi">
                 <div class="accordion-item bg-dark text-light ">
                     <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                        Tecnologías que uso
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Tecnologías que forman parte de mi stack
                     </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show">
                         <div class="accordion-body">
-                            <img class="icono-acordeon" src="images/javascript.svg" alt="">
-                            <img class="icono-acordeon" src="images/python.svg" alt="">
-                            <img class="icono-acordeon" src="images/sass.svg" alt="">
+                            <img class="icono-acordeon" src="images/html.svg" alt="">
                             <img class="icono-acordeon" src="images/css.svg" alt="">
+                            <img class="icono-acordeon" src="images/javascript.svg" alt="">
                             <img class="icono-acordeon" src="images/node.svg" alt="">
+                            <img class="icono-acordeon" src="images/sass.svg" alt="">
                             <img class="icono-acordeon" src="images/php.svg" alt="">
+                            <img class="icono-acordeon" src="images/python.svg" alt="">
+                            <img class="icono-acordeon" src="images/github.svg" alt="">
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Experiencia -->
 
-                <!-- Puedes repetir para diseño y aprendizaje -->
+    <section class="experiencia seccion-clara">
+        <h1 class="seccion-titulo text-center ">
+            Mi trayectoria
+        </h1>
+        <div class="container text-center ">
+            <div class="row">
+                <div class="col-12 col-md-6 carta  d-flex justify-content-center">
+                    <div class="card" style="width: 24rem;">
+                        <img src="images/pythonTrabajo.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Experiencia Laboral</h5>
+                            <p class="card-text">Colaboración académica en desarrollo backend. Desarrollé diversos módulos de backend para proyectos relacionados con las matemáticas aplicadas, en colaboración con un profesor universitario.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 carta d-flex justify-content-center">
+                    <div class="card" style="width: 24rem;">
+                        <img src="images/Wix.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Producción de contenido informativo </h5>
+                            <p class="card-text">Escribo articulos relacionados al desarrollo de software a través de mi blog, Mundo Tech. Buscando comunicar de manera clara y detallada </p>
+                            <a href="https://regish2704.wixsite.com/mundo-tech" target="_blank" class="btn btn-primary botonArticulos">Ingresa al portal de noticias</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

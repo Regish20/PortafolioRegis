@@ -23,6 +23,11 @@ h2 {
     background-color: rgb(4, 3, 3);
 }
 
+.seccion-clara {
+    color: #000000;
+    background-color: #fffbfb;
+}
+
 /* Sección Navbar */
 
 .navbar{
@@ -63,6 +68,7 @@ h2 {
     height: 500px;
     padding: 1rem;
     border-radius: 5px 5px 0px 0px;
+    margin-bottom: 3rem;
 }
 
 .sobre-mi .contenedor{
@@ -79,6 +85,33 @@ p{
   line-height: 1.6;
 }
 
+/* Experiencia */
+
+.experiencia{
+    padding: 1rem;
+
+}
+
+.container{
+    max-width: 1000px;
+}
+
+.carta{
+    margin-bottom: 1rem;
+}
+
+.card-text, .card-title{
+    text-align: left;
+}
+
+.botonArticulos{
+    display: flex;
+    justify-content: center;
+}
+
+.card-img-top{
+    height: 200px;
+}
 
 
 
@@ -93,7 +126,22 @@ p{
     .sobre-mi{
     height: 700px;
 }
+
 }
+
+@media(max-width: 400px){
+    .sobre-mi{
+        height: 775px;
+    }
+}
+
+@media(min-width: 768px){
+    .sobre-mi p{
+        text-align: justify;
+    }
+}
+
+
 
 /* Animaciones */
 
