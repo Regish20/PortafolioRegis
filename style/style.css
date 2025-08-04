@@ -1,5 +1,5 @@
 body {
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -19,7 +19,15 @@ h2 {
     font-family: "Rubik Maps", system-ui;
 }
 
-.seccion-oscura{
+h5 {
+    margin-bottom: 1rem;
+}
+
+h6 {
+    text-align: left;
+}
+
+.seccion-oscura {
     color: white;
     background-color: rgb(4, 3, 3);
 }
@@ -29,9 +37,15 @@ h2 {
     background-color: #fffbfb;
 }
 
-/* Sección Navbar */
+.seccion-titulo{
+    
+    font-size: 2rem;
+    font-family: "Rubik Maps", system-ui;
+}
 
-.navbar{
+
+/* Sección Navbar */
+.navbar {
     padding: 1rem;
     background-color: #ffffff;
 }
@@ -42,123 +56,124 @@ h2 {
 }
 
 /* Sección Hero*/
-
-.hero{
+.hero {
     min-height: 450px;
     text-align: center;
-
 }
 
-.hero-principal{
+.hero-principal {
     padding: 3rem;
 }
 
-.hero-principal h3{
+.hero-principal h3 {
     color: #000000;
     font-weight: 500;
-    font-size: 1.8rem ;
+    font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
 }
 
-.hero-imagen-desarrollador{
+.hero-imagen-desarrollador {
     width: 200px;
     height: 200px;
     margin: 20px;
 }
-/* Sobre mi */
 
-.sobre-mi{
+/* Sobre mi */
+.sobre-mi {
     height: 500px;
     padding: 1rem;
     border-radius: 5px 5px 0px 0px;
     margin-bottom: 3rem;
 }
 
-.sobre-mi .contenedor{
+.sobre-mi .contenedor {
     margin: 0 auto;
     max-width: 650px;
 }
 
-.icono-acordeon{
+.icono-acordeon {
     margin-right: 1rem;
 }
 
-p{
+p {
+    line-height: 1.6;
+}
 
-  line-height: 1.6;
+.accordion-button::after {
+    display: none !important;
+}
+
+.botonOculto {
+    background-color: transparent;
+    color: #fff;
+    border: none;
 }
 
 /* Experiencia */
-
-.experiencia{
+.experiencia, .proyectos{
     padding: 1rem;
     margin-bottom: 3rem;
-
 }
 
-.container{
-    max-width: 1000px;
+.carta, .proyectos-carta, .carta-formacion {
+    margin-bottom: 2rem;
 }
 
-.carta{
-    margin-bottom: 1rem;
-}
-
-.card-text, .card-title{
+.card-text, .card-title {
     text-align: left;
 }
 
-.botonArticulos{
+.botonArticulos {
     display: flex;
     justify-content: center;
 }
 
-.card-img-top{
+.card-img-top {
+    width: 100%;
     height: 200px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.contenedor-tarjetas, .proyectos-contenedor {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.formacion{
+    margin-bottom: 10rem;
 }
 
 /* Proyectos */
-
-.proyectos{
-    padding: 1rem;
-}
-
-
-.imagen-proyecto{
-    border-radius: 10px;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
+.imagen-proyecto {
     display: block;
     transition: all 0.2s ease;
-    
+    padding: 0;
 }
 
-.proyectos-contenedor{
-    padding-top: 60px;
+.proyectos-contenedor {
     margin-bottom: 40px;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .overlay p {
     font-weight: bold;
 }
 
-.overlay{
-    transition: all 0.2s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:  translate(-50%, -50%);
-    text-align: center;
-}
-
-.proyectos-carta{
-    
+.proyectos-carta {
     position: relative;
 }
 
-.proyectos-carta:hover .imagen-proyecto{
+.proyectos-carta:hover .imagen-proyecto {
     opacity: 0.2;
 }
 
@@ -166,43 +181,109 @@ p{
     opacity: 1;
 }
 
-/* Media Queries */
+.botonProyectos {
+    margin-bottom: 0.5rem;
+}
 
-@media(max-width: 767px){
-    .navbar-brand{
+/* Formación */
+.carta-formacion-imagen-senati {
+    object-fit: cover;
+}
+
+/* Contactos*/
+
+.contacto{
+    padding: 1rem;
+    background-color: rgb(4, 3, 3);
+}
+
+.contacto .container{
+    max-width: 1100px;
+    min-height: 200px;
+}
+
+.contacto .rectangulo{
+    margin: -3rem 0 3rem 0;
+    background-color:  #343fdb;
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px white;
+    padding: 1rem;
+}
+
+.contacto .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contacto button{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 1rem;
+    border-radius: 50px;
+}
+
+.contacto button:hover{
+    transition: all 0.3s ease;
+    color:#000000;
+    background-color: white;
+
+}
+
+
+/* Media Queries */
+@media(max-width: 767px) {
+    .navbar-brand {
         display: none;
         border-color: #bedaf4;
     }
     
-    .sobre-mi{
-    height: 700px;
-}
+    .sobre-mi {
+        height: 700px;
+    }
+    
+    .seccion-descripcion {
+        text-align: center;
+    }
+    
+    .imagen-proyecto {
+        margin-bottom: 1rem;
+    }
+
+    .proyectos-carta {
+        width: 100%;
+        height: auto;
+    }
+    
+    .proyectos-carta .card {
+        height: 100%;
+    }
+
 
 }
 
-@media(max-width: 400px){
-    .sobre-mi{
+@media(max-width: 400px) {
+    .sobre-mi {
         height: 775px;
     }
 }
 
-@media(min-width: 768px){
-    .sobre-mi p{
+@media(min-width: 768px) {
+    .sobre-mi p {
         text-align: justify;
     }
 }
 
-
-
 /* Animaciones */
-
 .fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.2s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease, transform 0.8s ease;
 }
 
 .fade-in.aparecido {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
