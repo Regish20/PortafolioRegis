@@ -47,13 +47,16 @@
                     <a class="nav-link active" aria-current="page" href="#sobre-mi">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Mi trayectoria</a>
+                    <a class="nav-link" href="#experiencia">Mi trayectoria</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Formación</a>
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#formacion">Formación</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -71,7 +74,7 @@
 
     <!-- Sobre mi -->
 
-    <section class="sobre-mi seccion-oscura" id="sobre-mi">
+    <section id="sobre-mi"  class="sobre-mi seccion-oscura" id="sobre-mi">
         <div class="contenedor  fade-in">
             <h2 class="seccion-titulo text-center">
                 Conoce a Regis Albornoz
@@ -111,7 +114,7 @@
 
     <!-- Experiencia -->
 
-    <section class="experiencia seccion-clara d-flex justify-content-center">
+    <section id="experiencia" class="experiencia seccion-clara d-flex justify-content-center">
         <div class="container contenedor-tarjetas text-center ">
             <h2 class="seccion-titulo text-center ">
                 Mi trayectoria
@@ -126,7 +129,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Experiencia Laboral</h5>
                                 <p class="card-text">Colaboración académica en desarrollo backend. Desarrollé diversos módulos de backend para proyectos relacionados con las matemáticas aplicadas, en colaboración con un profesor universitario.</p>
-                                <a href="#" class="btn btn-primary botonArticulos">Descargar CV</a>
+                                <a href="assets/Curriculum Profesional Sin Foto Sencillo Blanco y Negro.pdf" download="Curriculum Profesional Sin Foto Sencillo Blanco y Negro.pdf" class="btn btn-danger botonArticulos">Descargar CV</a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +150,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Formación Académica</h5>
                                 <p class="card-text">Actualmente me encuentro en tercer ciclo de la carrera de desarrollo de software y he realizado varios cursos orientados tanto al desarrollo web como al desarrollo backend con Python. </p>
-                                <a href="#Formacion" class="btn btn-primary botonArticulos">Ver más</a>
+                                <a href="#Formacion" class="btn btn-success botonArticulos">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -157,84 +160,105 @@
 
     <!-- Proyectos -->
 
-    <section class="proyectos seccion-clara d-flex justify-content-center">
-        <div class="container text-center proyectos-contenedor">
-        <h2 class="seccion-titulo text-center">Mis proyectos</h2>
-        <h5 class="seccion-descripcion text-center">Estos son algunos proyectos que he realizado a lo largo del tiempo</h5>
+    <section id="proyectos" class="proyectos seccion-clara d-flex justify-content-center">
+    <div class="container text-center proyectos-contenedor">
+            <h2 class="seccion-titulo text-center">Mis proyectos</h2>
+            <h5 class="seccion-descripcion text-center">Estos son algunos proyectos que he realizado a lo largo del tiempo</h5>
             <div class="row">
 
-            <!-- Proyecto 1 -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
-                    <div class="proyectos-carta shadow-sm">
-                    <div class="card h-100">
-                        <img class="imagen-proyecto card-img-top " src="images/pagina1.png" alt="">
-                        <div class="overlay">
-                            <p>El cafetal</p>
-                            <div class="iconos-contenedor">
-                                <a href="" target="_blank" rel="noopener noreferrer ">
-                                    <img src="images/github-icono.svg" alt="">
+                <!-- Proyecto 1 -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="proyecto-card card shadow-sm h-100">
+                        <div class="proyecto-imagen-container">
+                            <img class="proyecto-imagen card-img-top" src="images/pagina1.png" alt="El Cafetal">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">El Cafetal</h5>
+                            <p class="card-text flex-grow-1">Página web de una cafetería con diseño moderno y funcional.</p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="tecnologias mb-3">
+                                <span class="badge bg-danger me-1">HTML</span>
+                                <span class="badge bg-primary me-1">CSS</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                            </div>
+                            
+                            <!-- Enlaces -->
+                            <div class="proyecto-enlaces d-flex justify-content-center gap-2">
+                                <a href="https://github.com/Regish20/ElCafetal.git" target="_blank" 
+                                class="btn btn-outline-dark btn-sm" rel="noopener noreferrer">
+                                    <i class="bi bi-github"></i> Código
                                 </a>
-                                <a href="https://elcafetal.netlify.app/#" target="_blank" rel="noopener noreferrer">
-                                    <img src="images/laptop.svg" alt="">
+                                <a href="https://elcafetal.netlify.app/#" target="_blank" 
+                                class="btn btn-primary btn-sm" rel="noopener noreferrer">
+                                    <i class="bi bi-eye"></i> Ver sitio
                                 </a>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <button type="button" class="botonProyectos btn btn-danger">HTML</button>
-                            <button type="button" class="botonProyectos btn btn-primary">CSS</button>
-                            <button type="button" class="botonProyectos btn btn-warning">JavaScript</button>
-                        </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Proyecto 2 -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
-                    <div class="proyectos-carta shadow-sm">
-                    <div class="card h-100">
-                        <img class="imagen-proyecto card-img-top" src="images/pagina2.png" alt="">
-                        <div class="overlay">
-                            <p>Blog de té</p>
-                            <div class="iconos-contenedor">
-                                <a href="" target="_blank" rel="noopener noreferrer ">
-                                    <img src="images/github-icono.svg" alt="">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="proyecto-card card shadow-sm h-100">
+                        <div class="proyecto-imagen-container">
+                            <img class="proyecto-imagen card-img-top" src="images/pagina2.png" alt="Blog de té">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Blog de Té</h5>
+                            <p class="card-text flex-grow-1">Blog informativo sobre diferentes tipos de té y sus beneficios.</p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="tecnologias mb-3">
+                                <span class="badge bg-danger me-1">HTML</span>
+                                <span class="badge bg-primary me-1">CSS</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                            </div>
+                            
+                            <!-- Enlaces -->
+                            <div class="proyecto-enlaces d-flex justify-content-center gap-2">
+                                <a href="https://github.com/Regish20/blogDeTe.git" target="_blank" 
+                                class="btn btn-outline-dark btn-sm" rel="noopener noreferrer">
+                                    <i class="bi bi-github"></i> Código
                                 </a>
-                                <a href="https://blog-de-te.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <img src="images/laptop.svg" alt="">
+                                <a href="https://blog-de-te.netlify.app/" target="_blank" 
+                                class="btn btn-primary btn-sm" rel="noopener noreferrer">
+                                    <i class="bi bi-eye"></i> Ver sitio
                                 </a>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <button type="button" class="botonProyectos btn btn-danger">HTML</button>
-                            <button type="button" class="botonProyectos btn btn-primary">CSS</button>
-                            <button type="button" class="botonProyectos btn btn-warning">JavaScript</button>
-                        </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Proyecto 3 -->
-                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center ">
-                    <div class="proyectos-carta shadow-sm">
-                    <div class="card h-100">
-                        <img class="imagen-proyecto card-img-top" src="images/pagina3.png" alt="">
-                        <div class="overlay">
-                            <p>Mundo tecnológico</p>
-                            <div class="iconos-contenedor">
-                                <a href="" target="_blank" rel="noopener noreferrer ">
-                                    <img src="images/github-icono.svg" alt="">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="proyecto-card card shadow-sm h-100">
+                        <div class="proyecto-imagen-container">
+                            <img class="proyecto-imagen card-img-top" src="images/pagina3.png" alt="Mundo tecnológico">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mundo Tecnológico</h5>
+                            <p class="card-text flex-grow-1">Portal de noticias tecnológicas con diseño responsive.</p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="tecnologias mb-3">
+                                <span class="badge bg-danger me-1">HTML</span>
+                                <span class="badge bg-primary me-1">CSS</span>
+                                <span class="badge bg-warning text-dark me-1">JavaScript</span>
+                                <span class="badge bg-info text-dark">Bootstrap</span>
+                            </div>
+                            
+                            <!-- Enlaces -->
+                            <div class="proyecto-enlaces d-flex justify-content-center gap-2">
+                                <a href="https://github.com/Regish20/MundoTecnologico.git" target="_blank" 
+                                class="btn btn-outline-dark btn-sm" rel="noopener noreferrer">
+                                    <i class="bi bi-github"></i> Código
                                 </a>
-                                <a href="https://noticias-mundo-tecnologico.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                    <img src="images/laptop.svg" alt="">
+                                <a href="https://noticias-mundo-tecnologico.netlify.app/" target="_blank" 
+                                class="btn btn-primary btn-sm" rel="noopener noreferrer">
+                                    <i class="bi bi-eye"></i> Ver sitio
                                 </a>
                             </div>
-                        </div>
-                        <div class="card-body h-200">
-                            <button type="button" class="botonProyectos btn btn-danger">HTML</button>
-                            <button type="button" class="botonProyectos btn btn-primary">CSS</button>
-                            <button type="button" class="botonProyectos btn btn-warning">JavaScript</button>
-                            <button type="button" class="botonProyectos btn btn-primary">Bootstrap</button>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -243,7 +267,7 @@
     </section>
 
      <!-- Formación Academica -->
-    <section class="experiencia formacion seccion-clara d-flex justify-content-center">
+    <section id="formacion" class="experiencia formacion seccion-clara d-flex justify-content-center">
         <div class="container contenedor-tarjetas text-center ">
             <h2 class="seccion-titulo text-center " id="Formacion">
                 Formación Academica
@@ -305,7 +329,7 @@
     </section>
 
     <!-- Contacto -->
-     <section class="contacto seccion-oscura">
+     <section id="contacto" class="contacto seccion-oscura">
         <div class="container rectangulo text-center d-flex justify-content-center">
             <div class="row">
                 <div class="col-12 col-md-4 seccion-titulo">
@@ -324,9 +348,22 @@
      </section>
 
     <!-- Footer -->
-    <footer class="footer seccion-oscura">
-        <img class="footer-icono " src="images/footerIcono.svg" alt="">
-        <p class="footer-texto text-center">Aprendo y creo todos los días</p>
+    <footer class="footer seccion-oscura ">
+        <div class="contenedor-footer">
+            <img class="footer-icono" src="images/footerIcono.svg" alt="">
+            <p class="footer-texto text-center">Aprendo y creo todos los días</p>
+            <div class="footer-imagenes">
+                <a href="https://github.com/Regish20" target="_blank" rel="noopener noreferrer">
+                    <img  src="images/github-claro.svg" alt="">
+                </a>
+                <a class="email" href="mailto:regis.h2704@gmail.com">
+                    <img src="images/Correo.svg" alt="">
+                </a>
+                <a  href="assets/Curriculum Profesional Sin Foto Sencillo Blanco y Negro.pdf" download="Curriculum Profesional Sin Foto Sencillo Blanco y Negro.pdf" >
+                    <img  src="images/pdf.svg" alt="">
+                </a>
+            </div>
+        </div>
     </footer> 
 
 
