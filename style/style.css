@@ -315,6 +315,12 @@ footer {
 /* ===== MEDIA QUERIES ===== */
 
 @media (max-width: 575px) {
+    .hero-imagen-desarrollador{
+        height: 184px;
+        width: 240px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .proyectos {
         padding: 1.5rem 0.25rem;
     }
