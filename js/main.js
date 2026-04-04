@@ -294,6 +294,34 @@ function setYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
+// ── Theme toggle ─────────────────────────────────────
+function initTheme() {
+  const toggle = document.getElementById("themeToggle");
+  const icon = toggle.querySelector("i");
+  
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
+  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute("data-theme", "dark");
+    icon.className = "bi bi-sun-fill";
+  }
+  
+  toggle.addEventListener("click", () => {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    
+    if (isDark) {
+      document.documentElement.removeAttribute("data-theme");
+      icon.className = "bi bi-moon-fill";
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      icon.className = "bi bi-sun-fill";
+      localStorage.setItem("theme", "dark");
+    }
+  });
+}
+
 // ── Boot ─────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   renderSkills();
@@ -303,6 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initNavbar();
   initContactForm();
+  initTheme();
   setYear();
   requestAnimationFrame(() => setTimeout(initObserver, 50));
 });

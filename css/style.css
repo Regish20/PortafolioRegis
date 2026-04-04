@@ -16,6 +16,17 @@
   --transition: .3s cubic-bezier(.4,0,.2,1);
 }
 
+[data-theme="dark"] {
+  --black: #e4e7ef;
+  --dark: #0d0f14;
+  --mid: #9ca3af;
+  --border: #2d3748;
+  --white: #1a1d27;
+  --off-white: #111318;
+  --shadow: 0 4px 28px rgba(0,0,0,.30);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,.40);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -34,6 +45,38 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  transition: background var(--transition), color var(--transition);
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: rgba(10,91,209,.06);
+}
+
+[data-theme="dark"] .theme-toggle {
+  border-color: rgba(255,255,255,.15);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(251,191,36,.1);
 }
 
 img {
@@ -46,11 +89,139 @@ img {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   padding: .9rem 0;
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), background var(--transition);
 }
 
 #mainNav.scrolled {
   box-shadow: 0 2px 20px rgba(0,0,0,.08);
+}
+
+[data-theme="dark"] #mainNav {
+  background: rgba(26,29,39,.96);
+}
+
+[data-theme="dark"] .hero-section {
+  background: var(--white);
+}
+
+[data-theme="dark"] .hero-grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+}
+
+[data-theme="dark"] .hero-grid-bg::after {
+  background: radial-gradient(ellipse 70% 60% at 60% 50%, transparent 40%, rgba(26,29,39,.9) 100%);
+}
+
+[data-theme="dark"] .form-input-custom {
+  background: var(--off-white);
+}
+
+[data-theme="dark"] .contact-form {
+  background: var(--off-white);
+}
+
+[data-theme="dark"] .cert-card {
+  background: rgba(255,255,255,.03);
+}
+
+[data-theme="dark"] .cert-card:hover {
+  background: rgba(255,255,255,.06);
+}
+
+[data-theme="dark"] .timeline::before {
+  background: var(--border);
+}
+
+[data-theme="dark"] .timeline-dot {
+  border-color: var(--dark);
+}
+
+[data-theme="dark"] .footer-section {
+  background: var(--black);
+}
+
+[data-theme="dark"] .bg-white {
+  background: var(--white) !important;
+}
+
+[data-theme="dark"] .skill-card {
+  background: var(--white);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .project-card {
+  background: var(--white);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .project-img {
+  background: var(--border);
+}
+
+[data-theme="dark"] .filter-btn {
+  border-color: var(--border);
+  color: var(--mid);
+}
+
+[data-theme="dark"] .form-input-custom {
+  background: var(--white);
+  border-color: var(--border);
+  color: var(--black);
+}
+
+[data-theme="dark"] .form-input-custom::placeholder {
+  color: var(--mid);
+}
+
+[data-theme="dark"] .info-item {
+  color: var(--mid);
+}
+
+[data-theme="dark"] .contact-info-item {
+  color: var(--black);
+}
+
+[data-theme="dark"] .contact-info-item > div span {
+  color: var(--mid);
+}
+
+[data-theme="dark"] .social-icon {
+  border-color: var(--border);
+  color: var(--mid);
+}
+
+[data-theme="dark"] .footer-copy {
+  color: rgba(255,255,255,.45);
+}
+
+[data-theme="dark"] .timeline-item {
+  color: var(--black);
+}
+
+[data-theme="dark"] .project-title {
+  color: var(--black);
+}
+
+[data-theme="dark"] .project-desc {
+  color: var(--mid);
+}
+
+[data-theme="dark"] .timeline-title {
+  color: var(--black);
+}
+
+[data-theme="dark"] .timeline-company {
+  color: var(--mid);
+}
+
+[data-theme="dark"] .timeline-desc {
+  color: var(--mid);
+}
+
+[data-theme="dark"] .back-to-top {
+  box-shadow: 0 4px 16px rgba(0,0,0,.4);
 }
 
 .navbar-brand {
@@ -102,6 +273,11 @@ img {
   color: rgba(255,255,255,.55);
 }
 
+html[data-theme="dark"] .section-tag.light,
+[data-theme="dark"] .section-tag.light {
+  color: rgba(255,255,255,.85) !important;
+}
+
 .section-title {
   font-family: var(--font-head);
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -128,6 +304,18 @@ img {
 
 .bg-dark-custom {
   background: var(--dark);
+}
+
+[data-theme="dark"] #certifications .cert-name,
+[data-theme="dark"] #certifications .cert-issuer,
+[data-theme="dark"] #certifications .cert-date {
+  color: rgba(255,255,255,.9);
+}
+
+[data-theme="dark"] #certifications .cert-badge {
+  color: rgba(255,255,255,.9);
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.2);
 }
 
 .btn-primary-custom,
@@ -300,13 +488,15 @@ img {
 
 .about-img-wrap {
   position: relative;
-  display: inline-block;
+  display: block;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .about-img-border {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
   border: 2px solid var(--blue);
   border-radius: 16px;
   top: 14px;
@@ -866,7 +1056,23 @@ img {
   transform: translateY(0);
 }
 
+@media (max-width: 1200px) {
+  .about-img-wrap {
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .hero-section {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+}
+
 @media (max-width: 992px) {
+  .about-img {
+    height: 420px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -875,6 +1081,60 @@ img {
   }
   .hero-scroll-cue {
     display: none;
+  }
+  .hero-section {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  
+  .about-img-wrap {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .about-img {
+    height: 360px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .about-img-border {
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    top: 10px;
+    left: 10px;
+  }
+  
+  .about-stat-card {
+    bottom: -14px;
+    right: 6px;
+    padding: 0.7rem 0.9rem;
+  }
+  
+  .stat-num {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    height: 300px;
+  }
+  
+  .about-stat-card {
+    bottom: -10px;
+    right: 4px;
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .stat-num {
+    font-size: 1.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.68rem;
   }
 }
 
