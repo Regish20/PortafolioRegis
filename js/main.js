@@ -310,7 +310,6 @@ function initFilters() {
   });
 }
 
-// ── Contact form ─────────────────────────────────────
 function initContactForm() {
   const form   = document.getElementById("contactForm");
   const status = document.getElementById("form-status");
@@ -321,10 +320,14 @@ function initContactForm() {
     const btn = form.querySelector("button[type=submit]");
     btn.disabled = true;
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+    status.className = "";
+    status.textContent = "";
 
     try {
       const fd = new FormData(form);
-      const res = await fetch("/", {
+      fd.append("bot-field", "");
+
+      const res = await fetch(window.location.pathname, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(fd).toString()

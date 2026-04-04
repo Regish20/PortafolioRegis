@@ -206,68 +206,84 @@
        CONTACTO
   ══════════════════════════════════════════ -->
 
-  <section id="contact" class="section-pad bg-white">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-5">
-          <p class="section-tag">Contacto</p>
-          <h2 class="section-title">¿Trabajamos juntos?</h2>
-          <p class="section-desc">
-            Estoy disponible para proyectos freelance, colaboraciones o posiciones full-time.
-            No dudes en escribirme.
-          </p>
-          <div class="contact-info-list">
-            <a href="mailto:regish2007@gmail.com" class="contact-info-item">
-              <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
-              <div><strong>Email</strong><span>regish2007@gmail.com</span></div>
-            </a>
-            <a href="tel:+51908523008" class="contact-info-item">
-              <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
-              <div><strong>Teléfono</strong><span>+51 908 523 008</span></div>
-            </a>
-            <div class="contact-info-item">
-              <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
-              <div><strong>Ubicación</strong><span>Lima, Perú</span></div>
-            </div>
-            <a href="https://wa.me/51908523008?text=Hola%20Regis%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte" target="_blank" rel="noopener noreferrer" class="contact-info-item btn-whatsapp-contact">
-              <div class="ci-icon"><i class="bi bi-whatsapp"></i></div>
-              <div><strong>WhatsApp</strong><span>Escríbeme directo</span></div>
-            </a>
+<section id="contact" class="section-pad bg-white">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <p class="section-tag">Contacto</p>
+        <h2 class="section-title">¿Trabajamos juntos?</h2>
+        <p class="section-desc">
+          Estoy disponible para proyectos freelance, colaboraciones o posiciones full-time.
+          No dudes en escribirme.
+        </p>
+        <div class="contact-info-list">
+          <a href="mailto:regish2007@gmail.com" class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div><strong>Email</strong><span>regish2007@gmail.com</span></div>
+          </a>
+          <a href="tel:+51908523008" class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
+            <div><strong>Teléfono</strong><span>+51 908 523 008</span></div>
+          </a>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div><strong>Ubicación</strong><span>Lima, Perú</span></div>
           </div>
-        </div>
-        <div class="col-lg-7">
-          <form class="contact-form" id="contactForm" name="contacto" method="POST" data-netlify="true" netlify>
-            <input type="hidden" name="form-name" value="contacto"/>
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label class="form-label-custom">Nombre *</label>
-                <input type="text" name="nombre" class="form-input-custom" required placeholder="Tu nombre"/>
-              </div>
-              <div class="col-sm-6">
-                <label class="form-label-custom">Email *</label>
-                <input type="email" name="email" class="form-input-custom" required placeholder="tu@email.com"/>
-              </div>
-              <div class="col-12">
-                <label class="form-label-custom">Asunto *</label>
-                <input type="text" name="asunto" class="form-input-custom" required placeholder="¿En qué puedo ayudarte?"/>
-              </div>
-              <div class="col-12">
-                <label class="form-label-custom">Mensaje *</label>
-                <textarea name="mensaje" class="form-input-custom" rows="5" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary-custom w-100">
-                  Enviar mensaje <i class="bi bi-send-fill ms-1"></i>
-                </button>
-                <div id="form-status" class="mt-3 text-center"></div>
-              </div>
-            </div>
-          </form>
+          <a href="https://wa.me/51908523008?text=Hola%20Regis%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte" 
+             target="_blank" rel="noopener noreferrer" 
+             class="contact-info-item btn-whatsapp-contact">
+            <div class="ci-icon"><i class="bi bi-whatsapp"></i></div>
+            <div><strong>WhatsApp</strong><span>Escríbeme directo</span></div>
+          </a>
         </div>
       </div>
+
+      <div class="col-lg-7">
+        <form class="contact-form" id="contactForm" name="contacto" 
+              method="POST" action="/index.html"
+              data-netlify="true" netlify>
+          
+          <input type="hidden" name="form-name" value="contacto"/>
+          
+          <!-- Honeypot anti-spam -->
+          <p style="display:none">
+            <input name="bot-field"/>
+          </p>
+
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label class="form-label-custom">Nombre *</label>
+              <input type="text" name="nombre" class="form-input-custom" 
+                     required placeholder="Tu nombre"/>
+            </div>
+            <div class="col-sm-6">
+              <label class="form-label-custom">Email *</label>
+              <input type="email" name="email" class="form-input-custom" 
+                     required placeholder="tu@email.com"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label-custom">Asunto *</label>
+              <input type="text" name="asunto" class="form-input-custom" 
+                     required placeholder="¿En qué puedo ayudarte?"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label-custom">Mensaje *</label>
+              <textarea name="mensaje" class="form-input-custom" 
+                        rows="5" required 
+                        placeholder="Cuéntame sobre tu proyecto..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary-custom w-100">
+                Enviar mensaje <i class="bi bi-send-fill ms-1"></i>
+              </button>
+              <div id="form-status" class="mt-3 text-center"></div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </section>
- 
+  </div>
+</section>
   <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
