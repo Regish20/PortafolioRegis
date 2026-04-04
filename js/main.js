@@ -6,94 +6,111 @@
 const DATA = {
 
   skills: [
-    { icon: "bi-filetype-php", name: "PHP",         nivel: "Avanzado",   cat: "Backend"  },
-    { icon: "bi-filetype-js",  name: "JavaScript",  nivel: "Avanzado",   cat: "Frontend" },
-    { icon: "bi-filetype-html",name: "HTML & CSS",   nivel: "Avanzado",   cat: "Frontend" },
-    { icon: "bi-bootstrap",    name: "Bootstrap",   nivel: "Avanzado",   cat: "Frontend" },
-    { icon: "bi-database",     name: "MySQL",        nivel: "Avanzado",   cat: "Database" },
-    { icon: "bi-git",          name: "Git & GitHub", nivel: "Intermedio", cat: "DevOps"   },
-    { icon: "bi-server",       name: "REST APIs",   nivel: "Intermedio", cat: "Backend"  },
-    { icon: "bi-file-earmark-code", name: "React",  nivel: "Intermedio", cat: "Frontend" },
+    { icon: "bi-filetype-html", name: "HTML & CSS", nivel: "Avanzado", cat: "Frontend" },
+    { icon: "bi-filetype-js",  name: "JavaScript", nivel: "Intermedio", cat: "Frontend" },
+    { icon: "bi-filetype-php", name: "PHP",         nivel: "Intermedio", cat: "Backend" },
+    { icon: "bi-filetype-py",  name: "Python",     nivel: "Intermedio", cat: "Backend" },
+    { icon: "bi-bootstrap",    name: "Bootstrap",  nivel: "Intermedio",   cat: "Frontend" },
+    { icon: "bi-database",     name: "MySQL",       nivel: "Intermedio", cat: "Database" },
+    { icon: "bi-git",          name: "Git & GitHub", nivel: "Intermedio", cat: "DevOps" },
+    { icon: "bi-code-square",  name: "Django",      nivel: "Básico",      cat: "Backend" },
   ],
 
   projects: [
     {
-      emoji: "🛒",
-      title: "E-Commerce Platform",
-      desc: "Tienda online completa con carrito de compras, pasarela de pagos y panel de administración desarrollada en PHP + MySQL.",
-      tags: ["PHP", "MySQL", "Bootstrap"],
+      emoji: "📁",
+      title: "Portafolio Antiguo",
+      desc: "Mi primer portafolio web desarrollado durante mi formación inicial.",
+      tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
       filter: "web",
-      demo: "#", repo: "#",
+      img: "img/pagina7.png",
+      demo: "https://portafolio-regis-antiguo.netlify.app/", repo: "https://github.com/Regish20/PortafolioRegis-Primera-Version-",
     },
     {
-      emoji: "📊",
-      title: "Dashboard Analytics",
-      desc: "Panel de control de métricas en tiempo real con gráficos dinámicos, filtros avanzados y exportación a PDF/Excel.",
-      tags: ["JavaScript", "Chart.js", "PHP"],
+      emoji: "☕",
+      title: "El Cafetal",
+      desc: "Página web de una cafetería con diseño moderno y funcional.",
+      tags: ["HTML", "CSS", "JavaScript"],
       filter: "web",
-      demo: "#", repo: "#",
+      img: "img/pagina1.png",
+      demo: "https://elcafetal.netlify.app/", repo: "https://github.com/Regish20/ElCafetal.git",
     },
     {
-      emoji: "🔐",
-      title: "Auth REST API",
-      desc: "API RESTful con autenticación JWT, control de roles, rate limiting y documentación Swagger completa.",
-      tags: ["PHP", "JWT", "MySQL"],
+      emoji: "🍵",
+      title: "Blog de Té",
+      desc: "Blog informativo sobre diferentes tipos de té y sus beneficios.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      filter: "web",
+      img: "img/pagina2.png",
+      demo: "https://blog-de-te.netlify.app/", repo: "https://github.com/Regish20/blogDeTe.git",
+    },
+    {
+      emoji: "💻",
+      title: "Mundo Tecnológico",
+      desc: "Portal de noticias tecnológicas con diseño responsive.",
+      tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      filter: "web",
+      img: "img/pagina3.png",
+      demo: "https://noticias-mundo-tecnologico.netlify.app/", repo: "https://github.com/Regish20/MundoTecnologico.git",
+    },
+    {
+      emoji: "📰",
+      title: "Mundo Tech (Wix)",
+      portal: true,
+      desc: "Mi blog de noticias tecnológicas donde escribo artículos sobre desarrollo de software y tecnología.",
+      tags: ["Wix", "Content Writing"],
+      filter: "web",
+      img: "img/pagina8.png",
+      demo: "https://regish2704.wixsite.com/mundo-tech", repo: "#",
+    },
+    {
+      emoji: "📝",
+      title: "Lista de Tareas",
+      desc: "Lista de tareas básica para practicar manejo de errores y backend en Django.",
+      tags: ["HTML", "CSS", "Python", "Django", "Bootstrap"],
+      filter: "web",
+      img: "img/pagina4.png",
+      demo: "https://lista-de-tareas-os6p.onrender.com/", repo: "https://github.com/Regish20/Lista-De-Tareas-Django",
+    },
+    {
+      emoji: "📚",
+      title: "Blog Histórico",
+      desc: "Blog que recopila diversos hechos históricos de diferente indole.",
+      tags: ["HTML", "CSS", "PHP", "Bootstrap", "MySQL"],
+      filter: "web",
+      img: "img/pagina5.png",
+      demo: "https://blog-historia-production.up.railway.app/index.php", repo: "https://github.com/Regish20/Blog-Historia",
+    },
+    {
+      emoji: "🔌",
+      title: "API REST Django",
+      desc: "API RESTful desarrollada con Django REST Framework. Endpoints para gestión de usuarios, autenticación JWT y operaciones CRUD.",
+      tags: ["Python", "Django REST", "JWT", "MySQL"],
       filter: "api",
-      demo: "#", repo: "#",
-    },
-    {
-      emoji: "📱",
-      title: "Task Manager App",
-      desc: "Aplicación de gestión de tareas con tablero kanban, notificaciones push y sincronización en tiempo real.",
-      tags: ["JavaScript", "PHP", "WebSockets"],
-      filter: "app",
-      demo: "#", repo: "#",
-    },
-    {
-      emoji: "🌐",
-      title: "Blog CMS",
-      desc: "Sistema de gestión de contenidos personalizado con editor WYSIWYG, SEO automático y multi-idioma.",
-      tags: ["PHP", "MySQL", "Bootstrap"],
-      filter: "web",
-      demo: "#", repo: "#",
-    },
-    {
-      emoji: "⚙️",
-      title: "Microservices API",
-      desc: "Arquitectura de microservicios con orquestación por Docker, métricas con Prometheus y CI/CD en GitHub Actions.",
-      tags: ["PHP", "Docker", "REST"],
-      filter: "api",
-      demo: "#", repo: "#",
+      img: "img/pagina6.png",
+      demo: "https://proyecto-api-z0yl.onrender.com/", repo: "https://github.com/Regish20/proyecto-api",
     },
   ],
 
   certifications: [
-    { icon: "bi-award-fill",    issuer: "Meta",       name: "Front-End Developer Professional Certificate", date: "2024", badge: "Profesional" },
-    { icon: "bi-cloud-fill",    issuer: "AWS",         name: "AWS Certified Developer – Associate",           date: "2024", badge: "Associate" },
-    { icon: "bi-mortarboard-fill", issuer: "Coursera", name: "Full Stack Web Development Specialization",    date: "2023", badge: "Especialización" },
-    { icon: "bi-database-fill", issuer: "Oracle",      name: "Oracle Database SQL Certified Associate",       date: "2023", badge: "Associate" },
-    { icon: "bi-shield-check",  issuer: "CompTIA",     name: "CompTIA Security+ Certification",               date: "2022", badge: "Seguridad" },
-    { icon: "bi-code-slash",    issuer: "freeCodeCamp",name: "JavaScript Algorithms & Data Structures",       date: "2022", badge: "Certificado" },
+    { icon: "bi-mortarboard-fill", issuer: "SENATI",   name: "Desarrollo de Software - 4to ciclo",   date: "2024 - Presente", badge: "Carrera", link: "#" },
+    { icon: "bi-award-fill",       issuer: "Cisco",    name: "Python Essentials 1",                  date: "2024", badge: "Certificado", link: "https://www.credly.com/badges/2be0005a-c072-4d8f-b07d-d3b34b4d2354/public_url" },
+    { icon: "bi-award-fill",       issuer: "Udemy",    name: "Curso Python Avanzado",                date: "2025", badge: "Certificado", link: "https://www.udemy.com/certificate/UC-b4548563-389f-460f-988f-a1dc42247f59/" },
+    { icon: "bi-award-fill",       issuer: "Udemy",    name: "Curso de Git y Github",               date: "2025", badge: "Certificado", link: "https://www.udemy.com/certificate/UC-089af0fb-1b66-4d8a-84ba-adba7d171ab8/" },
   ],
 
   experience: [
     {
-      date: "2022 – Presente",
-      title: "Desarrollador Full Stack Senior",
-      company: "Tech Solutions S.A.C. — Lima, Perú",
-      desc: "Liderazgo técnico de un equipo de 4 desarrolladores. Arquitectura de sistemas SaaS en PHP y React con +10.000 usuarios activos.",
+      date: "2024 - Presente",
+      title: "Desarrollador Backend",
+      company: "Freelance — Lima, Perú",
+      desc: "Desarrollo de soluciones backend con Python (Django) y PHP. Creación de APIs REST, gestión de bases de datos MySQL y despliegue en servicios como Render y Railway. Colaboración en proyectos académicos de matemáticas aplicadas.",
     },
     {
-      date: "2020 – 2022",
-      title: "Desarrollador Web Mid-Level",
-      company: "Digital Agency XYZ — Lima, Perú",
-      desc: "Desarrollo de más de 15 proyectos para clientes del sector retail y financiero. Implementación de APIs de pago e integración con ERPs.",
-    },
-    {
-      date: "2018 – 2020",
-      title: "Desarrollador Junior",
-      company: "StartupHub Peru — Lima, Perú",
-      desc: "Desarrollo frontend con Bootstrap y jQuery, mantenimiento de bases de datos MySQL, automatización de reportes en PHP.",
+      date: "2025",
+      title: "Productor de Contenido",
+      company: "Mundo Tech — Blog",
+      desc: "Escribí artículos relacionados al desarrollo de software. Comunicando de manera clara las últimas noticias y tendencias del mundo tecnológico.",
     },
   ],
 
@@ -130,17 +147,21 @@ function renderProjects(filter = "all") {
 
   filtered.forEach(p => {
     const col = document.createElement("div");
-    col.className = "col-md-6 col-lg-4 fade-in-up visible";
+    col.className = "col-md-6 col-lg-4 fade-in-up";
+    const imgHtml = p.img ? `<img src="${p.img}" alt="${p.title}" class="project-img" onerror="this.style.display='none';this.parentElement.innerHTML='<span>${p.emoji}</span>'">` : `<div class="project-img"><span>${p.emoji}</span></div>`;
+    const linksHtml = p.portal 
+      ? `<a href="${p.demo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver sitio</a>`
+      : `<a href="${p.demo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-eye"></i> Demo</a>
+         <a href="${p.repo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Código</a>`;
     col.innerHTML = `
       <div class="project-card">
-        <div class="project-img"><span>${p.emoji}</span></div>
+        <div class="project-img-wrap">${imgHtml}</div>
         <div class="project-body">
           <div class="project-tags">${p.tags.map(t => `<span class="project-tag">${t}</span>`).join("")}</div>
           <h3 class="project-title">${p.title}</h3>
           <p class="project-desc">${p.desc}</p>
           <div class="project-links">
-            <a href="${p.demo}" class="project-link"><i class="bi bi-eye"></i> Demo</a>
-            <a href="${p.repo}" class="project-link"><i class="bi bi-github"></i> Código</a>
+            ${linksHtml}
           </div>
         </div>
       </div>`;
@@ -156,6 +177,7 @@ function renderCerts() {
   DATA.certifications.forEach(c => {
     const col = document.createElement("div");
     col.className = "col-sm-6 col-lg-4 fade-in-up";
+    const linkHtml = c.link && c.link !== "#" ? `<a href="${c.link}" target="_blank" rel="noopener noreferrer" class="cert-link"><i class="bi bi-box-arrow-up-right"></i> Ver certificado</a>` : "";
     col.innerHTML = `
       <div class="cert-card">
         <div class="cert-icon"><i class="bi ${c.icon}"></i></div>
@@ -163,6 +185,7 @@ function renderCerts() {
         <div class="cert-name">${c.name}</div>
         <div class="cert-date"><i class="bi bi-calendar3"></i> ${c.date}</div>
         <span class="cert-badge">${c.badge}</span>
+        ${linkHtml}
       </div>`;
     grid.appendChild(col);
   });
@@ -190,15 +213,20 @@ function renderTimeline() {
 function initObserver() {
   const elements = document.querySelectorAll(".fade-in-up");
 
-  // IntersectionObserver no disponible
   if (!("IntersectionObserver" in window)) {
-    elements.forEach(el => el.classList.add("visible"));
+    elements.forEach((el, i) => {
+      setTimeout(() => el.classList.add("visible"), i * 60);
+    });
     return;
   }
 
   const obs = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
+        // Delay escalonado solo entre elementos del mismo "batch" visible
+        const siblings = [...entry.target.parentElement.children];
+        const colIdx = siblings.indexOf(entry.target);
+        entry.target.style.transitionDelay = `${colIdx * 0.07}s`;
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
@@ -206,12 +234,8 @@ function initObserver() {
   }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
 
   elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      el.classList.add("visible");
-    } else {
-      obs.observe(el);
-    }
+    el.style.transitionDelay = "0s"; // reset cualquier delay previo
+    obs.observe(el);
   });
 }
 
@@ -236,9 +260,44 @@ function initNavbar() {
     });
   });
 
-  btt && btt.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-}
+  if (btt) {
+    btt.innerHTML = `
+      <div class="elevator-track"></div>
+      <div class="elevator-cabin"><i class="bi bi-arrow-up"></i></div>
+      <div class="speed-line left"></div>
+      <div class="speed-line right"></div>
+    `;
 
+    btt.addEventListener("click", () => {
+      if (btt.classList.contains("riding")) return;
+
+      btt.classList.add("riding");
+
+      const startY = window.scrollY;
+      const duration = 1800;
+      const startTime = performance.now();
+
+      function scrollStep(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        const ease = progress < 0.5
+          ? 2 * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+        window.scrollTo(0, startY * (1 - ease));
+
+        if (progress < 1) {
+          requestAnimationFrame(scrollStep);
+        } else {
+          setTimeout(() => btt.classList.remove("riding"), 300);
+        }
+      }
+
+      requestAnimationFrame(scrollStep);
+    });
+  }
+}
 // ── Project filter ───────────────────────────────────
 function initFilters() {
   document.querySelectorAll(".filter-btn").forEach(btn => {
