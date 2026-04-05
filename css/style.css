@@ -142,6 +142,19 @@ img {
   background: var(--black);
 }
 
+[data-theme="dark"] .footer-brand {
+  color: #0d0f14;
+}
+
+[data-theme="dark"] .footer-copy {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .footer-social {
+  color: rgba(26, 29, 39, .6);
+  border-color: rgba(26, 29, 39, .25);
+}
+
 [data-theme="dark"] .bg-white {
   background: var(--white) !important;
 }
@@ -1065,9 +1078,12 @@ html[data-theme="dark"] .section-tag.light,
   gap: .5rem;
 }
 
-.footer-copy {
-  font-size: .83rem;
+.footer-section .footer-copy {
   color: rgba(255,255,255,.35);
+}
+
+[data-theme="dark"] .footer-section .footer-copy {
+  color: #0d0f14;
 }
 
 .footer-social {
