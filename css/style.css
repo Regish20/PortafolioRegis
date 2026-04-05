@@ -13,7 +13,7 @@
   --shadow-lg: 0 12px 48px rgba(10,91,209,.16);
   --font-head: 'DM Serif Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
-  --transition: .3s cubic-bezier(.4,0,.2,1);
+  --transition: .3s ease-in-out;
 }
 
 [data-theme="dark"] {
@@ -587,9 +587,9 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.6rem;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-              border-color 0.4s ease;
+  transition: transform 0.6s ease-in-out,
+              box-shadow 0.6s ease-in-out,
+              border-color 0.4s ease-in-out;
   will-change: transform;
 }
 
@@ -598,13 +598,7 @@ html[data-theme="dark"] .section-tag.light,
   box-shadow: 0 20px 44px rgba(10, 91, 209, 0.16),
               0 4px 12px rgba(0, 0, 0, 0.06);
   border-color: rgba(10, 91, 209, 0.35);
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.35s ease,
-              border-color 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px) scale(1.015);
+  transition: all 0.6s ease-in-out;
 }
 
 .skill-icon {
@@ -638,7 +632,7 @@ html[data-theme="dark"] .section-tag.light,
   height: 100%;
   border-radius: 99px;
   background: linear-gradient(90deg, var(--blue), var(--blue-light));
-  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+  transition: width 1.2s ease-in-out;
   width: 0;
 }
 
@@ -673,9 +667,9 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-              border-color 0.6s ease;
+  transition: transform 0.75s ease-in-out,
+              box-shadow 0.75s ease-in-out,
+              border-color 0.6s ease-in-out;
   will-change: transform;
   display: flex;
   flex-direction: column;
@@ -695,21 +689,19 @@ html[data-theme="dark"] .section-tag.light,
   box-shadow: 0 24px 52px rgba(10, 91, 209, 0.18),
               0 6px 16px rgba(0, 0, 0, 0.07);
   border-color: rgba(10, 91, 209, 0.35);
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.5s ease,
-              border-color 0.45s ease;
+  transition: all 0.6s ease-in-out;
 }
 
 .project-img-wrap {
   height: 195px;
   background: var(--off-white);
   overflow: hidden;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.6s ease-in-out;
 }
 
 .project-card:hover .project-img-wrap {
   transform: scale(1.07);
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.6s ease-in-out;
 }
 
 .project-img-wrap .project-img {
@@ -793,10 +785,10 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 14px;
   padding: 1.6rem;
-  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.75s ease,
-              background 0.6s ease,
-              border-color 0.5s ease;
+  transition: transform 0.75s ease-in-out,
+              box-shadow 0.75s ease-in-out,
+              background 0.6s ease-in-out,
+              border-color 0.5s ease-in-out;
   will-change: transform;
   height: 100%;
 
@@ -811,10 +803,7 @@ html[data-theme="dark"] .section-tag.light,
   border-color: rgba(10, 91, 209, 0.4);
   transform: translateY(-10px);
   box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
-  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-              box-shadow 0.5s ease,
-              background 0.45s ease,
-              border-color 0.45s ease;
+  transition: all 0.6s ease-in-out;
 }
 
 .cert-icon {
@@ -1177,7 +1166,7 @@ html[data-theme="dark"] .section-tag.light,
   pointer-events: none; }
 
 .back-to-top.riding .elevator-cabin {
-  animation: elevatorRise 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: elevatorRise 0.9s ease-in-out forwards;
 }
 
 .back-to-top .speed-line {
@@ -1210,8 +1199,8 @@ html[data-theme="dark"] .section-tag.light,
 .fade-in-up {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 1s ease-in-out,
+              transform 1s ease-in-out;
   will-change: transform, opacity;
 }
 
