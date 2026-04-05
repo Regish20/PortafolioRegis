@@ -93,18 +93,18 @@ const DATA = {
   ],
 
   certifications: [
-    { icon: "bi-mortarboard-fill", issuer: "SENATI",   name: "Desarrollo de Software - 4to ciclo",   date: "2024 - Presente", badge: "Carrera", link: "#" },
-    { icon: "bi-award-fill",       issuer: "Cisco",    name: "Python Essentials 1",                  date: "2024", badge: "Certificado", link: "https://www.credly.com/badges/2be0005a-c072-4d8f-b07d-d3b34b4d2354/public_url" },
-    { icon: "bi-award-fill",       issuer: "Udemy",    name: "Curso Python Avanzado",                date: "2025", badge: "Certificado", link: "https://www.udemy.com/certificate/UC-b4548563-389f-460f-988f-a1dc42247f59/" },
-    { icon: "bi-award-fill",       issuer: "Udemy",    name: "Curso de Git y Github",               date: "2025", badge: "Certificado", link: "https://www.udemy.com/certificate/UC-089af0fb-1b66-4d8a-84ba-adba7d171ab8/" },
-  ],
+  { icon: "bi-mortarboard-fill", issuer: "SENATI",  name: "Desarrollo de Software - 4to ciclo", date: "2024 - Presente", badge: "Carrera",      link: "" },
+  { icon: "bi-award-fill",       issuer: "Cisco",   name: "Python Essentials 1",                date: "2024",          badge: "Certificado",  link: "https://tu-link-cisco.com" },
+  { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso Python Avanzado",              date: "2025",          badge: "Certificado",  link: "https://tu-link-udemy.com" },
+  { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso de Git y Github",              date: "2025",          badge: "Certificado",  link: "https://tu-link-udemy2.com" },
+],
 
   experience: [
     {
       date: "2024 - Presente",
-      title: "Desarrollador Backend",
-      company: "Freelance — Lima, Perú",
-      desc: "Desarrollo de soluciones backend con Python (Django) y PHP. Creación de APIs REST, gestión de bases de datos MySQL y despliegue en servicios como Render y Railway. Colaboración en proyectos académicos de matemáticas aplicadas.",
+      title: "Tutor de Programación & Matemáticas",
+      company: "Universidad (Docente Particular) — Lima, Perú",
+      desc: "Colaboración académica en desarrollo backend. Desarrollé módulos para proyectos de matemáticas aplicadas y creé material educativo sobre programación, en conjunto con un profesor universitario.",
     },
     {
       date: "2025",
@@ -177,15 +177,16 @@ function renderCerts() {
   DATA.certifications.forEach(c => {
     const col = document.createElement("div");
     col.className = "col-sm-6 col-lg-4 fade-in-up";
-    const linkHtml = c.link && c.link !== "#" ? `<a href="${c.link}" target="_blank" rel="noopener noreferrer" class="cert-link"><i class="bi bi-box-arrow-up-right"></i> Ver certificado</a>` : "";
     col.innerHTML = `
       <div class="cert-card">
         <div class="cert-icon"><i class="bi ${c.icon}"></i></div>
         <div class="cert-issuer">${c.issuer}</div>
         <div class="cert-name">${c.name}</div>
         <div class="cert-date"><i class="bi bi-calendar3"></i> ${c.date}</div>
-        <span class="cert-badge">${c.badge}</span>
-        ${linkHtml}
+        <div class="cert-footer">
+          <span class="cert-badge">${c.badge}</span>
+          ${c.link ? `<a href="${c.link}" target="_blank" rel="noopener noreferrer" class="cert-link"><i class="bi bi-box-arrow-up-right"></i> Ver certificado</a>` : ''}
+        </div>
       </div>`;
     grid.appendChild(col);
   });
