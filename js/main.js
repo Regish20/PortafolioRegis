@@ -325,9 +325,8 @@ function initContactForm() {
 
     try {
       const fd = new FormData(form);
-      fd.append("bot-field", "");
 
-      const res = await fetch(window.location.pathname, {
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(fd).toString()
@@ -338,17 +337,18 @@ function initContactForm() {
         status.textContent = "✔ Mensaje enviado con éxito. Te contactaré pronto.";
         form.reset();
       } else {
-        throw new Error();
+        throw new Error(res.status);
       }
-    } catch {
+    } catch (err) {
+      console.error("Error al enviar formulario:", err);
       status.className = "mt-3 text-center error";
       status.textContent = "✖ Ocurrió un error. Por favor intenta nuevamente.";
     } finally {
-      btn.disabled = false;
-      btn.innerHTML = 'Enviar mensaje <i class="bi bi-send-fill ms-1"></i>';
+          btn.disabled = false;
+          btn.innerHTML = 'Enviar mensaje <i class="bi bi-send-fill ms-1"></i>';
+        }
+      });
     }
-  });
-}
 
 // ── Footer year ──────────────────────────────────────
 function setYear() {
@@ -360,26 +360,28 @@ function setYear() {
 function initTheme() {
   const toggle = document.getElementById("themeToggle");
   const icon = toggle.querySelector("i");
-  
-  const savedTheme = localStorage.getItem("theme");
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem("theme"); } catch {}
+
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
+
   if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
     document.documentElement.setAttribute("data-theme", "dark");
     icon.className = "bi bi-sun-fill";
   }
-  
+
   toggle.addEventListener("click", () => {
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    
+
     if (isDark) {
       document.documentElement.removeAttribute("data-theme");
       icon.className = "bi bi-moon-fill";
-      localStorage.setItem("theme", "light");
+      try { localStorage.setItem("theme", "light"); } catch {}
     } else {
       document.documentElement.setAttribute("data-theme", "dark");
       icon.className = "bi bi-sun-fill";
-      localStorage.setItem("theme", "dark");
+      try { localStorage.setItem("theme", "dark"); } catch {}
     }
   });
 }
