@@ -100,6 +100,14 @@ img {
   background: rgba(26,29,39,.96);
 }
 
+[data-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28228, 231, 239, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] .navbar-toggler {
+  border-color: rgba(228, 231, 239, 0.3);
+}
+
 [data-theme="dark"] .hero-section {
   background: var(--white);
 }
@@ -600,9 +608,9 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.6rem;
-  transition: transform 0.6s ease-in-out,
-              box-shadow 0.6s ease-in-out,
-              border-color 0.4s ease-in-out;
+  transition: transform 0.45s ease-in-out,
+              box-shadow 0.45s ease-in-out,
+              border-color 0.35s ease-in-out;
   will-change: transform;
 }
 
@@ -611,7 +619,7 @@ html[data-theme="dark"] .section-tag.light,
   box-shadow: 0 20px 44px rgba(10, 91, 209, 0.16),
               0 4px 12px rgba(0, 0, 0, 0.06);
   border-color: rgba(10, 91, 209, 0.35);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 
 .skill-icon {
@@ -680,9 +688,9 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.75s ease-in-out,
-              box-shadow 0.75s ease-in-out,
-              border-color 0.6s ease-in-out;
+  transition: transform 0.55s ease-in-out,
+              box-shadow 0.55s ease-in-out,
+              border-color 0.45s ease-in-out;
   will-change: transform;
   display: flex;
   flex-direction: column;
@@ -702,19 +710,19 @@ html[data-theme="dark"] .section-tag.light,
   box-shadow: 0 24px 52px rgba(10, 91, 209, 0.18),
               0 6px 16px rgba(0, 0, 0, 0.07);
   border-color: rgba(10, 91, 209, 0.35);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 
 .project-img-wrap {
   height: 195px;
   background: var(--off-white);
   overflow: hidden;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.45s ease-in-out;
 }
 
 .project-card:hover .project-img-wrap {
   transform: scale(1.07);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 
 .project-img-wrap .project-img {
@@ -798,10 +806,10 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 14px;
   padding: 1.6rem;
-  transition: transform 0.75s ease-in-out,
-              box-shadow 0.75s ease-in-out,
-              background 0.6s ease-in-out,
-              border-color 0.5s ease-in-out;
+  transition: transform 0.55s ease-in-out,
+              box-shadow 0.55s ease-in-out,
+              background 0.45s ease-in-out,
+              border-color 0.4s ease-in-out;
   will-change: transform;
   height: 100%;
 
@@ -816,7 +824,7 @@ html[data-theme="dark"] .section-tag.light,
   border-color: rgba(10, 91, 209, 0.4);
   transform: translateY(-10px);
   box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 
 .cert-icon {
@@ -1064,9 +1072,11 @@ html[data-theme="dark"] .section-tag.light,
   font-weight: 600;
 }
 
+/* Footer */
 .footer-section {
   background: var(--black);
   border-top: 1px solid rgba(255,255,255,.07);
+  padding: 1.5rem 0;
 }
 
 .footer-brand {
@@ -1079,11 +1089,8 @@ html[data-theme="dark"] .section-tag.light,
 }
 
 .footer-section .footer-copy {
+  font-size: .83rem;
   color: rgba(255,255,255,.35);
-}
-
-[data-theme="dark"] .footer-section .footer-copy {
-  color: #0d0f14;
 }
 
 .footer-social {
@@ -1285,6 +1292,21 @@ html[data-theme="dark"] .section-tag.light,
   .stat-num {
     font-size: 1.5rem;
   }
+  /* Footer centrado en móvil */
+  .footer-section .row {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    gap: .75rem;
+    padding: 1.75rem 0;
+  }
+  .footer-section .col-md-4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-section .footer-brand { justify-content: center; }
+  .footer-section .d-flex { justify-content: center !important; }
 }
 
 @media (max-width: 480px) {
@@ -1305,6 +1327,8 @@ html[data-theme="dark"] .section-tag.light,
   .stat-label {
     font-size: 0.68rem;
   }
+  .footer-section .col-md-4 { text-align: center !important; }
+  .footer-section .d-flex   { justify-content: center !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
