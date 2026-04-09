@@ -102,7 +102,7 @@ const DATA = {
   experience: [
     {
       date: "2024 - Presente",
-      title: "Tutor de Programación & Matemáticas",
+      title: "Tutor de Programación orientada a las matemáticas",
       company: "Universidad (Docente Particular) — Lima, Perú",
       desc: "Colaboración académica en desarrollo backend. Desarrollé módulos para proyectos de matemáticas aplicadas y creé material educativo sobre programación, en conjunto con un profesor universitario.",
     },
