@@ -611,9 +611,7 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.6rem;
-  transition: transform 0.45s ease-in-out,
-              box-shadow 0.45s ease-in-out,
-              border-color 0.35s ease-in-out;
+  transition: all 0.3s ease-in-out;
   will-change: transform;
 }
 
@@ -622,7 +620,6 @@ html[data-theme="dark"] .section-tag.light,
   box-shadow: 0 20px 44px rgba(10, 91, 209, 0.16),
               0 4px 12px rgba(0, 0, 0, 0.06);
   border-color: rgba(10, 91, 209, 0.35);
-  transition: all 0.45s ease-in-out;
 }
 
 .skill-icon {
@@ -691,9 +688,7 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.55s ease-in-out,
-              box-shadow 0.55s ease-in-out,
-              border-color 0.45s ease-in-out;
+  transition: all 0.3s ease-in-out;
   will-change: transform;
   display: flex;
   flex-direction: column;
@@ -713,19 +708,17 @@ html[data-theme="dark"] .section-tag.light,
   box-shadow: 0 24px 52px rgba(10, 91, 209, 0.18),
               0 6px 16px rgba(0, 0, 0, 0.07);
   border-color: rgba(10, 91, 209, 0.35);
-  transition: all 0.45s ease-in-out;
 }
 
 .project-img-wrap {
   height: 195px;
   background: var(--off-white);
   overflow: hidden;
-  transition: transform 0.45s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .project-card:hover .project-img-wrap {
   transform: scale(1.07);
-  transition: all 0.45s ease-in-out;
 }
 
 .project-img-wrap .project-img {
@@ -809,14 +802,9 @@ html[data-theme="dark"] .section-tag.light,
   border: 1px solid rgba(255,255,255,.1);
   border-radius: 14px;
   padding: 1.6rem;
-  transition: transform 0.55s ease-in-out,
-              box-shadow 0.55s ease-in-out,
-              background 0.45s ease-in-out,
-              border-color 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   will-change: transform;
   height: 100%;
-
-  /* Igual que project-card */
   display: flex;
   flex-direction: column;
 }
@@ -827,7 +815,6 @@ html[data-theme="dark"] .section-tag.light,
   border-color: rgba(10, 91, 209, 0.4);
   transform: translateY(-10px);
   box-shadow: 0 20px 44px rgba(0, 0, 0, 0.28);
-  transition: all 0.45s ease-in-out;
 }
 
 .cert-icon {
@@ -1171,8 +1158,8 @@ html[data-theme="dark"] .section-tag.light,
 
 @keyframes elevatorRise {
   0%   { transform: translateY(52px); opacity: 0; }
-  15%  { opacity: 1; }
-  80%  { opacity: 1; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
   100% { transform: translateY(-52px); opacity: 0; }
 }
 
@@ -1188,11 +1175,12 @@ html[data-theme="dark"] .section-tag.light,
 }
 
 .back-to-top.riding {
-  animation: elevatorPulse 0.6s ease infinite;
-  pointer-events: none; }
+  animation: elevatorPulse 0.4s ease infinite;
+  pointer-events: none;
+}
 
 .back-to-top.riding .elevator-cabin {
-  animation: elevatorRise 0.9s ease-in-out forwards;
+  animation: elevatorRise 0.6s ease-in-out forwards;
 }
 
 .back-to-top .speed-line {

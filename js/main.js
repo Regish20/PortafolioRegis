@@ -275,7 +275,7 @@ function initNavbar() {
       btt.classList.add("riding");
 
       const startY = window.scrollY;
-      const duration = 1800;
+      const duration = 1200;
       const startTime = performance.now();
 
       function scrollStep(currentTime) {
@@ -291,7 +291,7 @@ function initNavbar() {
         if (progress < 1) {
           requestAnimationFrame(scrollStep);
         } else {
-          setTimeout(() => btt.classList.remove("riding"), 300);
+          setTimeout(() => btt.classList.remove("riding"), 150);
         }
       }
 
