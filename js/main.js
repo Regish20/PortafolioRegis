@@ -94,9 +94,9 @@ const DATA = {
 
   certifications: [
   { icon: "bi-mortarboard-fill", issuer: "SENATI",  name: "Desarrollo de Software - 4to ciclo", date: "2024 - Presente", badge: "Carrera",      link: "" },
-  { icon: "bi-award-fill",       issuer: "Cisco",   name: "Python Essentials 1",                date: "2024",          badge: "Certificado",  link: "https://tu-link-cisco.com" },
-  { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso Python Avanzado",              date: "2025",          badge: "Certificado",  link: "https://tu-link-udemy.com" },
-  { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso de Git y Github",              date: "2025",          badge: "Certificado",  link: "https://tu-link-udemy2.com" },
+  { icon: "bi-award-fill",       issuer: "Cisco",   name: "Python Essentials 1",                date: "2024",          badge: "Certificado",  link: "https://www.credly.com/badges/2be0005a-c072-4d8f-b07d-d3b34b4d2354/public_url" },
+  { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso Python Avanzado",              date: "2025",          badge: "Certificado",  link: "https://www.udemy.com/certificate/UC-b4548563-389f-460f-988f-a1dc42247f59/" },
+  { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso de Git y Github",              date: "2025",          badge: "Certificado",  link: "https://www.udemy.com/certificate/UC-089af0fb-1b66-4d8a-84ba-adba7d171ab8/" },
 ],
 
   experience: [
