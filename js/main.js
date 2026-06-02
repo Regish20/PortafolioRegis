@@ -18,6 +18,17 @@ const DATA = {
 
   projects: [
     {
+      emoji: "IA",
+      title: "Inshore Angler",
+      desc: "Tienda ecommerce de pesca deportiva con identidad marina, categorias de productos, ofertas destacadas y enfoque en compra rapida.",
+      tags: ["Ecommerce", "UI Web", "Branding", "Responsive"],
+      filter: "web",
+      img: "img/inshore-angler.png",
+      demo: "https://inshoreanglerstore.com/",
+      featured: true,
+      linkLabel: "Ver sitio",
+    },
+    {
       emoji: "📁",
       title: "Portafolio Antiguo",
       desc: "Mi primer portafolio web desarrollado durante mi formación inicial.",
@@ -101,6 +112,12 @@ const DATA = {
 
   experience: [
     {
+      date: "2026 - Presente",
+      title: "Desarrollador Freelance",
+      company: "Proyectos independientes — Lima, Perú",
+      desc: "Desarrollo soluciones web para negocios y emprendimientos, desde maquetación responsive hasta funcionalidades dinámicas. Me enfoco en interfaces claras, rendimiento estable y entregas adaptadas a las necesidades reales de cada cliente.",
+    },
+    {
       date: "2024 - Presente",
       title: "Tutor de Programación orientada a las matemáticas",
       company: "Universidad (Docente Particular) — Lima, Perú",
@@ -147,14 +164,29 @@ function renderProjects(filter = "all") {
 
   filtered.forEach(p => {
     const col = document.createElement("div");
-    col.className = "col-md-6 col-lg-4 fade-in-up";
+    col.className = `col-md-6 ${p.featured ? "col-lg-8 project-featured-col" : "col-lg-4"} fade-in-up`;
     const imgHtml = p.img ? `<img src="${p.img}" alt="${p.title}" class="project-img" onerror="this.style.display='none';this.parentElement.innerHTML='<span>${p.emoji}</span>'">` : `<div class="project-img"><span>${p.emoji}</span></div>`;
-    const linksHtml = p.portal 
-      ? `<a href="${p.demo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver sitio</a>`
-      : `<a href="${p.demo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-eye"></i> Demo</a>
-         <a href="${p.repo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Código</a>`;
+    const links = [];
+
+    if (p.portal && p.demo && p.demo !== "#") {
+      links.push(`<a href="${p.demo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver sitio</a>`);
+    } else {
+      if (p.demo && p.demo !== "#") {
+        links.push(`<a href="${p.demo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-eye"></i> ${p.linkLabel || "Demo"}</a>`);
+      }
+      if (p.repo && p.repo !== "#") {
+        links.push(`<a href="${p.repo}" class="project-link" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Codigo</a>`);
+      }
+    }
+
+    const linksHtml = links.length
+      ? links.join("")
+      : `<span class="project-note"><i class="bi bi-stars"></i> ${p.note || "Proyecto en portfolio"}</span>`;
+    const cardAttrs = p.demo && p.demo !== "#"
+      ? ` data-project-url="${p.demo}" role="link" tabindex="0"`
+      : "";
     col.innerHTML = `
-      <div class="project-card">
+      <div class="project-card${p.featured ? " project-card-featured" : ""}"${cardAttrs}>
         <div class="project-img-wrap">${imgHtml}</div>
         <div class="project-body">
           <div class="project-tags">${p.tags.map(t => `<span class="project-tag">${t}</span>`).join("")}</div>
@@ -166,6 +198,22 @@ function renderProjects(filter = "all") {
         </div>
       </div>`;
     grid.appendChild(col);
+  });
+
+  grid.querySelectorAll("[data-project-url]").forEach(card => {
+    const openProject = () => window.open(card.dataset.projectUrl, "_blank", "noopener,noreferrer");
+
+    card.addEventListener("click", event => {
+      if (event.target.closest("a")) return;
+      openProject();
+    });
+
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProject();
+      }
+    });
   });
 }
 
