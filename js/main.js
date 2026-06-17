@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════
+﻿/* ══════════════════════════════════════════
    PORTFOLIO — main.js
 ══════════════════════════════════════════ */
 
@@ -13,14 +13,14 @@ const DATA = {
     { icon: "bi-bootstrap",    name: "Bootstrap",  nivel: "Intermedio",   cat: "Frontend" },
     { icon: "bi-database",     name: "MySQL",       nivel: "Intermedio", cat: "Database" },
     { icon: "bi-git",          name: "Git & GitHub", nivel: "Intermedio", cat: "DevOps" },
-    { icon: "bi-code-square",  name: "Django",      nivel: "Básico",      cat: "Backend" },
+    { icon: "bi-window-stack",  name: "Responsive Design", nivel: "Intermedio", cat: "Frontend" },
   ],
 
   projects: [
     {
       emoji: "IA",
       title: "Inshore Angler",
-      desc: "Tienda ecommerce de pesca deportiva con identidad marina, categorias de productos, ofertas destacadas y enfoque en compra rapida.",
+      desc: "Tienda ecommerce de pesca deportiva con identidad marina, categorías de productos, ofertas destacadas y enfoque en compra rápida.",
       tags: ["Ecommerce", "UI Web", "Branding", "Responsive"],
       filter: "web",
       img: "img/inshore-angler.png",
@@ -112,22 +112,22 @@ const DATA = {
 
   experience: [
     {
-      date: "2026 - Presente",
-      title: "Desarrollador Freelance",
-      company: "Proyectos independientes — Lima, Perú",
-      desc: "Desarrollo soluciones web para negocios y emprendimientos, desde maquetación responsive hasta funcionalidades dinámicas. Me enfoco en interfaces claras, rendimiento estable y entregas adaptadas a las necesidades reales de cada cliente.",
+      date: "Mayo 2026 - Presente",
+      title: "Desarrollador web independiente",
+      company: "Nexvio Studio — Lima, Perú",
+      desc: "Desarrollo páginas web junto a un equipo independiente de tres integrantes. Trabajo en maquetación responsive, interfaces modernas y organización técnica de proyectos digitales para clientes y emprendimientos.",
     },
     {
-      date: "2024 - Presente",
-      title: "Tutor de Programación orientada a las matemáticas",
-      company: "Universidad (Docente Particular) — Lima, Perú",
-      desc: "Colaboración académica en desarrollo backend. Desarrollé módulos para proyectos de matemáticas aplicadas y creé material educativo sobre programación, en conjunto con un profesor universitario.",
+      date: "Febrero 2026 - Junio 2026",
+      title: "Practicante de desarrollo web y sistemas",
+      company: "ONG APRODE PERU — Lima, Perú",
+      desc: "Apoyé el desarrollo y mantenimiento del sitio web institucional y participé en un sistema de asistencia laboral con PHP, MySQL, HTML, CSS y JavaScript.",
     },
     {
-      date: "2025",
-      title: "Productor de Contenido",
-      company: "Mundo Tech — Blog",
-      desc: "Escribí artículos relacionados al desarrollo de software. Comunicando de manera clara las últimas noticias y tendencias del mundo tecnológico.",
+      date: "Abril 2024 - Presente",
+      title: "Asistente privado en programación",
+      company: "Programación aplicada a problemas",
+      desc: "Brindo acompañamiento técnico personalizado y desarrollo algoritmos para resolver problemas matemáticos y lógicos, reforzando fundamentos de programación estructurada y POO.",
     },
   ],
 
