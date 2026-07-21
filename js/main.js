@@ -29,6 +29,26 @@ const DATA = {
       linkLabel: "Ver sitio",
     },
     {
+      emoji: "AC",
+      title: "Angler Cix",
+      desc: "Tienda catálogo para productos de pesca con navegación por categorías, diseño comercial y contacto directo para ventas.",
+      tags: ["Catálogo", "Ecommerce", "PHP", "Responsive"],
+      filter: "web",
+      img: "img/angler-cix-store.png",
+      demo: "https://anglercixstore.com/",
+      linkLabel: "Ver sitio",
+    },
+    {
+      emoji: "AP",
+      title: "APRODE PERU",
+      desc: "Sitio web institucional para una ONG peruana, con secciones informativas, programas, acción social, convenios, noticias y contacto.",
+      tags: ["Institucional", "PHP", "MySQL", "Responsive"],
+      filter: "web",
+      img: "img/aprode-peru.png",
+      demo: "https://aprodeperu.org/",
+      linkLabel: "Ver sitio",
+    },
+    {
       emoji: "📁",
       title: "Portafolio Antiguo",
       desc: "Mi primer portafolio web desarrollado durante mi formación inicial.",
@@ -105,6 +125,7 @@ const DATA = {
 
   certifications: [
   { icon: "bi-mortarboard-fill", issuer: "SENATI",  name: "Desarrollo de Software - 4to ciclo", date: "2024 - Presente", badge: "Carrera",      link: "" },
+  { icon: "bi-file-earmark-check-fill", issuer: "ONG APRODE PERU", name: "Constancia de prácticas preprofesionales", date: "Febrero - Junio 2026", badge: "Experiencia", link: "docs/constancia-practicas-aprode-regis-albornoz.pdf" },
   { icon: "bi-award-fill",       issuer: "Cisco",   name: "Python Essentials 1",                date: "2024",          badge: "Certificado",  link: "https://www.credly.com/badges/2be0005a-c072-4d8f-b07d-d3b34b4d2354/public_url" },
   { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso Python Avanzado",              date: "2025",          badge: "Certificado",  link: "https://www.udemy.com/certificate/UC-b4548563-389f-460f-988f-a1dc42247f59/" },
   { icon: "bi-award-fill",       issuer: "Udemy",   name: "Curso de Git y Github",              date: "2025",          badge: "Certificado",  link: "https://www.udemy.com/certificate/UC-089af0fb-1b66-4d8a-84ba-adba7d171ab8/" },
@@ -122,6 +143,8 @@ const DATA = {
       title: "Practicante de desarrollo web y sistemas",
       company: "ONG APRODE PERU — Lima, Perú",
       desc: "Apoyé el desarrollo y mantenimiento del sitio web institucional y participé en un sistema de asistencia laboral con PHP, MySQL, HTML, CSS y JavaScript.",
+      proof: "docs/constancia-practicas-aprode-regis-albornoz.pdf",
+      proofLabel: "Ver constancia de prácticas",
     },
     {
       date: "Abril 2024 - Presente",
@@ -253,7 +276,8 @@ function renderTimeline() {
       <div class="timeline-date">${e.date}</div>
       <div class="timeline-title">${e.title}</div>
       <div class="timeline-company">${e.company}</div>
-      <div class="timeline-desc">${e.desc}</div>`;
+      <div class="timeline-desc">${e.desc}</div>
+      ${e.proof ? `<a href="${e.proof}" target="_blank" rel="noopener noreferrer" class="timeline-proof"><i class="bi bi-file-earmark-pdf"></i> ${e.proofLabel || "Ver constancia"}</a>` : ""}`;
     tl.appendChild(item);
   });
 }

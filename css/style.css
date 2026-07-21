@@ -1157,6 +1157,30 @@ html[data-theme="dark"] .section-tag.light,
   line-height: 1.7;
 }
 
+.timeline-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  width: fit-content;
+  margin-top: .85rem;
+  padding: .42rem .85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(10,91,209,.25);
+  background: rgba(10,91,209,.07);
+  color: var(--blue);
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.timeline-proof:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 .contact-info-list {
   display: flex;
   flex-direction: column;
