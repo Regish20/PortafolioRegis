@@ -29,6 +29,16 @@ const DATA = {
       linkLabel: "Ver sitio",
     },
     {
+      emoji: "BE",
+      title: "Briefly — English News",
+      desc: "Aplicación web para practicar lectura en inglés con noticias A2–B2, definiciones bilingües y significados adaptados al contexto de cada oración.",
+      tags: ["React", "Vite", "Netlify Functions", "API"],
+      filter: "web",
+      img: "img/briefly-english-news.png",
+      demo: "https://briefly-english-news.netlify.app/",
+      linkLabel: "Probar app",
+    },
+    {
       emoji: "AC",
       title: "Angler Cix",
       desc: "Tienda catálogo para productos de pesca con navegación por categorías, diseño comercial y contacto directo para ventas.",
